@@ -1,0 +1,16 @@
+[student@workstation ~]$ oc new-app --name sleep --docker-image quay.io/${RHT_OCP4_QUAY_USER}/ubi-sleep:1.0
+W0222 03:37:41.580622    3854 dockerimagelookup.go:237] container image registry lookup failed: quay.io/mshimizu19/ubi-sleep:1.0: missing signature key
+error: unable to locate any local docker images with name "quay.io/mshimizu19/ubi-sleep:1.0"
+
+The 'oc new-app' command will match arguments to the following types:
+
+  1. Images tagged into image streams in the current project or the 'openshift' project
+     - if you don't specify a tag, we'll add ':latest'
+  2. Images in the Docker Hub, on remote registries, or on the local Docker engine
+  3. Templates in the current project or the 'openshift' project
+  4. Git repository URLs or local paths that point to Git repositories
+
+--allow-missing-images can be used to point to an image that does not exist yet.
+
+See 'oc new-app -h' for examples.
+
